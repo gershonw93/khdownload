@@ -39,8 +39,6 @@ async def handle_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(f"Gaming video: {url}\nDownloading...")
 
-    use_cookie = 'x.com' in parsed_url or 'twitter.com' in parsed_url
-
     ydl_opts = {
         'outtmpl': 'downloaded.%(ext)s',
         'format': 'mp4',
@@ -53,10 +51,10 @@ async def handle_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
         }],
     }
 
-if 'x.com' in parsed_url or 'twitter.com' in parsed_url:
-    ydl_opts['cookiefile'] = 'x_cookies.txt'
-elif 'youtube.com' in parsed_url or 'youtu.be' in parsed_url:
-    ydl_opts['cookiefile'] = 'youtube_cookies.txt'
+    if 'x.com' in parsed_url or 'twitter.com' in parsed_url:
+        ydl_opts['cookiefile'] = 'x_cookies.txt'
+    elif 'youtube.com' in parsed_url or 'youtu.be' in parsed_url:
+        ydl_opts['cookiefile'] = 'youtube_cookies.txt'
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -93,6 +91,7 @@ elif 'youtube.com' in parsed_url or 'youtu.be' in parsed_url:
         await update.message.reply_text("❌ Could not download the video. It may be DRM-protected or unsupported.\n\n" + str(e))
     except Exception as e:
         await update.message.reply_text("❌ An unexpected error occurred:\n" + str(e))
+
 
 # Run the bot
 app = ApplicationBuilder().token(BOT_TOKEN).build()
