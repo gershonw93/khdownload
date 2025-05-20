@@ -7,7 +7,7 @@ import yt_dlp
 
 # Bot token from @BotFather
 import os
-BOT_TOKEN = os.environ.get("7664658716:AAH658HKGhv_OvrEyt6_6sZr7_p_8ubs2bI")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 TELEGRAM_MAX_SIZE = 2000000000  # 2 GB in bytes
 
 # List of supported domains
@@ -53,8 +53,10 @@ async def handle_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
         }],
     }
 
-    if use_cookie:
-        ydl_opts['cookiefile'] = 'x_cookies.txt'
+if 'x.com' in parsed_url or 'twitter.com' in parsed_url:
+    ydl_opts['cookiefile'] = 'x_cookies.txt'
+elif 'youtube.com' in parsed_url or 'youtu.be' in parsed_url:
+    ydl_opts['cookiefile'] = 'youtube_cookies.txt'
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
