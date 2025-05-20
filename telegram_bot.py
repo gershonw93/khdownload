@@ -6,7 +6,8 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 import yt_dlp
 
 # Bot token from @BotFather
-BOT_TOKEN = "7664658716:AAH658HKGhv_OvrEyt6_6sZr7_p_8ubs2bI"
+import os
+BOT_TOKEN = os.environ.get("7664658716:AAH658HKGhv_OvrEyt6_6sZr7_p_8ubs2bI")
 TELEGRAM_MAX_SIZE = 2000000000  # 2 GB in bytes
 
 # List of supported domains
