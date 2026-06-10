@@ -164,7 +164,7 @@
     sizeSparks();
     window.addEventListener('resize', sizeSparks);
 
-    const COLORS = ['#00e5a0', '#7c5cff', '#f2f4f8', '#ffd479'];
+    const COLORS = ['#f7df4d', '#f0a500', '#f5f4ee', '#fff3b0'];
 
     window.addEventListener('pointerdown', (e) => {
       const n = 14;

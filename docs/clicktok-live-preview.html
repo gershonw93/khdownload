@@ -7,8 +7,8 @@
   <meta name="description" content="ClickTok Marketing puts your business on the map. Google Maps ranking that drives calls, plus custom software and automation that run your back office while you sleep." />
   <meta property="og:title" content="ClickTok Marketing — We put your business on the map" />
   <meta property="og:description" content="Google Maps ranking, custom software & automation." />
-  <meta name="theme-color" content="#07080c" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%2300e5a0'/%3E%3Ccircle cx='50' cy='50' r='18' fill='%2307080c'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#0a0a08" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23f7df4d'/%3E%3Cpath d='M32 26l42 20-18 6-6 18z' fill='%230a0a08'/%3E%3C/svg%3E" />
   <style>
 /* ============ Fonts ============ */
 @font-face {
@@ -44,14 +44,14 @@
 
 /* ============ Tokens ============ */
 :root {
-  --bg: #07080c;
-  --bg-soft: #0c0e15;
-  --bg-card: #10131c;
+  --bg: #0a0a08;
+  --bg-soft: #100f0a;
+  --bg-card: #14130c;
   --line: rgba(255, 255, 255, 0.08);
-  --text: #f2f4f8;
-  --text-dim: #9aa3b5;
-  --mint: #00e5a0;
-  --violet: #7c5cff;
+  --text: #f5f4ee;
+  --text-dim: #a3a191;
+  --mint: #f7df4d;   /* brand yellow (matched to logo) */
+  --violet: #f0a500; /* golden amber for gradient depth */
   --grad: linear-gradient(100deg, var(--mint), var(--violet));
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -77,7 +77,7 @@ body {
 }
 body[data-loading] { overflow: hidden; }
 
-::selection { background: var(--mint); color: #04140d; }
+::selection { background: var(--mint); color: #141100; }
 
 img, svg, canvas { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -171,7 +171,7 @@ em { font-style: normal; }
   .cursor__ring {
     position: absolute; top: -20px; left: -20px;
     width: 40px; height: 40px; border-radius: 50%;
-    border: 1.5px solid rgba(0, 229, 160, 0.55);
+    border: 1.5px solid rgba(247, 223, 77, 0.55);
     transition: transform 0.28s ease, background 0.28s ease, border-color 0.28s ease;
   }
   .cursor__label {
@@ -184,8 +184,8 @@ em { font-style: normal; }
     transition: opacity 0.2s ease, transform 0.2s ease;
     white-space: nowrap;
   }
-  .cursor--hover .cursor__ring { transform: scale(1.7); background: rgba(0, 229, 160, 0.08); }
-  .cursor--card .cursor__ring { transform: scale(2.2); border-color: rgba(124, 92, 255, 0.7); }
+  .cursor--hover .cursor__ring { transform: scale(1.7); background: rgba(247, 223, 77, 0.08); }
+  .cursor--card .cursor__ring { transform: scale(2.2); border-color: rgba(240, 165, 0, 0.8); }
   .cursor--card .cursor__label { opacity: 1; transform: scale(1); }
   body.has-cursor, body.has-cursor a, body.has-cursor button { cursor: none; }
 }
@@ -219,10 +219,10 @@ em { font-style: normal; }
   z-index: -1;
 }
 .btn:hover .btn__bg, .btn:focus-visible .btn__bg { transform: translateY(0); }
-.btn:hover, .btn:focus-visible { color: #04140d; border-color: transparent; }
-.btn--primary { background: var(--mint); color: #04140d; border-color: transparent; }
+.btn:hover, .btn:focus-visible { color: #141100; border-color: transparent; }
+.btn--primary { background: var(--mint); color: #141100; border-color: transparent; }
 .btn--primary .btn__bg { background: var(--violet); }
-.btn--primary:hover, .btn--primary:focus-visible { color: #fff; }
+.btn--primary:hover, .btn--primary:focus-visible { color: #141100; }
 .btn--ghost { color: var(--text); }
 .btn--small { padding: 11px 22px; font-size: 13.5px; }
 .btn--big {
@@ -240,7 +240,7 @@ em { font-style: normal; }
   transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
 }
 .nav--scrolled {
-  background: rgba(7, 8, 12, 0.72);
+  background: rgba(10, 10, 8, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--line);
@@ -299,7 +299,7 @@ em { font-style: normal; }
 /* ============ Mobile menu ============ */
 .menu {
   position: fixed; inset: 0; z-index: 92;
-  background: rgba(9, 10, 16, 0.96);
+  background: rgba(12, 12, 9, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   display: flex; flex-direction: column;
@@ -335,8 +335,8 @@ em { font-style: normal; }
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   background:
-    radial-gradient(900px 500px at 75% 20%, rgba(124, 92, 255, 0.16), transparent 65%),
-    radial-gradient(700px 460px at 20% 80%, rgba(0, 229, 160, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 75% 20%, rgba(240, 165, 0, 0.12), transparent 65%),
+    radial-gradient(700px 460px at 20% 80%, rgba(247, 223, 77, 0.08), transparent 60%),
     var(--bg);
 }
 .hero__vignette {
@@ -344,7 +344,7 @@ em { font-style: normal; }
   pointer-events: none;
   background:
     linear-gradient(to top, var(--bg) 0%, transparent 26%),
-    radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(7, 8, 12, 0.7) 100%);
+    radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(10, 10, 8, 0.7) 100%);
 }
 .hero__content {
   position: relative; z-index: 2;
@@ -440,7 +440,7 @@ em { font-style: normal; }
 }
 .marquee__group i { color: var(--mint); font-style: normal; font-size: 0.8em; }
 .marquee__group span:nth-child(odd) {
-  -webkit-text-stroke: 1px rgba(242, 244, 248, 0.55);
+  -webkit-text-stroke: 1px rgba(245, 244, 238, 0.55);
   color: transparent;
 }
 
@@ -465,8 +465,8 @@ em { font-style: normal; }
   outline: none;
 }
 .card:hover, .card:focus-visible {
-  border-color: rgba(0, 229, 160, 0.35);
-  box-shadow: 0 24px 70px -24px rgba(0, 229, 160, 0.18);
+  border-color: rgba(247, 223, 77, 0.35);
+  box-shadow: 0 24px 70px -24px rgba(247, 223, 77, 0.15);
 }
 .card__glare {
   position: absolute; inset: 0;
@@ -474,7 +474,7 @@ em { font-style: normal; }
   opacity: 0;
   transition: opacity 0.4s ease;
   background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 50%),
-    rgba(0, 229, 160, 0.14), rgba(124, 92, 255, 0.08) 45%, transparent 70%);
+    rgba(247, 223, 77, 0.12), rgba(240, 165, 0, 0.08) 45%, transparent 70%);
   z-index: 1;
 }
 .card:hover .card__glare { opacity: 1; }
@@ -587,8 +587,8 @@ em { font-style: normal; }
 .card:hover .card__flow span:nth-child(3) { transition-delay: 0.18s; }
 .card:hover .card__flow span:nth-child(5) { transition-delay: 0.36s; }
 .card:hover .card__flow span, .card.card--open .card__flow span {
-  border-color: rgba(0, 229, 160, 0.5);
-  background: rgba(0, 229, 160, 0.08);
+  border-color: rgba(247, 223, 77, 0.5);
+  background: rgba(247, 223, 77, 0.08);
 }
 
 /* expanding list (click effect) */
@@ -669,9 +669,9 @@ em { font-style: normal; }
   transition: border-color 0.35s ease, transform 0.35s ease, background 0.35s ease;
 }
 .step:hover {
-  border-color: rgba(124, 92, 255, 0.45);
+  border-color: rgba(247, 223, 77, 0.4);
   transform: translateY(-8px);
-  background: #131727;
+  background: #1b1910;
 }
 .step__num {
   display: inline-block;
@@ -700,7 +700,7 @@ em { font-style: normal; }
   letter-spacing: -0.01em;
   max-width: 1000px;
 }
-.why__statement .w { color: rgba(242, 244, 248, 0.22); transition: color 0.3s ease; }
+.why__statement .w { color: rgba(245, 244, 238, 0.22); transition: color 0.3s ease; }
 .why__statement .w.lit { color: var(--text); }
 .why__chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(36px, 5vw, 64px); }
 .chip {
@@ -722,8 +722,8 @@ em { font-style: normal; }
 /* ============ Contact ============ */
 .contact {
   background:
-    radial-gradient(800px 420px at 50% 110%, rgba(124, 92, 255, 0.18), transparent 65%),
-    radial-gradient(700px 380px at 50% 120%, rgba(0, 229, 160, 0.12), transparent 60%),
+    radial-gradient(800px 420px at 50% 110%, rgba(240, 165, 0, 0.14), transparent 65%),
+    radial-gradient(700px 380px at 50% 120%, rgba(247, 223, 77, 0.10), transparent 60%),
     var(--bg);
   border-top: 1px solid var(--line);
 }
@@ -788,7 +788,7 @@ em { font-style: normal; }
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader__inner">
       <div class="preloader__logo">
-        <span class="preloader__letter">C</span><span class="preloader__letter">L</span><span class="preloader__letter">I</span><span class="preloader__letter">C</span><span class="preloader__letter">K</span><span class="preloader__letter preloader__letter--accent">T</span><span class="preloader__letter preloader__letter--accent">O</span><span class="preloader__letter preloader__letter--accent">K</span>
+        <span class="preloader__letter">c</span><span class="preloader__letter">l</span><span class="preloader__letter">i</span><span class="preloader__letter">c</span><span class="preloader__letter">k</span><span class="preloader__letter preloader__letter--accent">t</span><span class="preloader__letter preloader__letter--accent">o</span><span class="preloader__letter preloader__letter--accent">k</span>
       </div>
       <div class="preloader__count" id="preloaderCount">0</div>
     </div>
@@ -810,11 +810,10 @@ em { font-style: normal; }
     <a class="nav__logo" href="#top" data-cursor="hover" aria-label="ClickTok home">
       <span class="nav__logo-pin">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-          <circle cx="12" cy="10" r="2.6" fill="currentColor"/>
+          <path d="M5 4l15 7-6.4 2.1L11.5 19 5 4Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
         </svg>
       </span>
-      <span class="nav__logo-text">Click<em>Tok</em></span>
+      <span class="nav__logo-text">click<em>tok</em></span>
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#services" data-cursor="hover" class="nav__link"><span>Services</span></a>
@@ -1144,7 +1143,7 @@ function init() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x07080c, 26, 52);
+  scene.fog = new THREE.Fog(0x0a0a08, 26, 52);
 
   const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 120);
   camera.position.set(0, 7.4, 14);
@@ -1174,8 +1173,8 @@ function init() {
     uMouseStrength: { value: 0 },
     uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
     uClicks: { value: Array.from({ length: MAX_CLICKS }, () => new THREE.Vector3(999, 999, -100)) },
-    uColorA: { value: new THREE.Color(0x7c5cff) },
-    uColorB: { value: new THREE.Color(0x00e5a0) },
+    uColorA: { value: new THREE.Color(0xf0a500) },
+    uColorB: { value: new THREE.Color(0xf7df4d) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -1242,7 +1241,7 @@ function init() {
         if (d > 0.5) discard;
         float alpha = smoothstep(0.5, 0.05, d);
         vec3 color = mix(uColorA, uColorB, clamp(vElev, 0.0, 1.0));
-        color += vGlow * vec3(0.55, 1.0, 0.85);
+        color += vGlow * vec3(1.0, 0.95, 0.55);
         gl_FragColor = vec4(color, alpha * (0.4 + vElev * 0.35 + vGlow * 0.6));
       }
     `,
@@ -1522,7 +1521,7 @@ function init() {
     sizeSparks();
     window.addEventListener('resize', sizeSparks);
 
-    const COLORS = ['#00e5a0', '#7c5cff', '#f2f4f8', '#ffd479'];
+    const COLORS = ['#f7df4d', '#f0a500', '#f5f4ee', '#fff3b0'];
 
     window.addEventListener('pointerdown', (e) => {
       const n = 14;

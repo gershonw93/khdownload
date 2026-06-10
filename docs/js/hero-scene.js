@@ -29,7 +29,7 @@ function init() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x07080c, 26, 52);
+  scene.fog = new THREE.Fog(0x0a0a08, 26, 52);
 
   const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 120);
   camera.position.set(0, 7.4, 14);
@@ -59,8 +59,8 @@ function init() {
     uMouseStrength: { value: 0 },
     uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
     uClicks: { value: Array.from({ length: MAX_CLICKS }, () => new THREE.Vector3(999, 999, -100)) },
-    uColorA: { value: new THREE.Color(0x7c5cff) },
-    uColorB: { value: new THREE.Color(0x00e5a0) },
+    uColorA: { value: new THREE.Color(0xf0a500) },
+    uColorB: { value: new THREE.Color(0xf7df4d) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -127,7 +127,7 @@ function init() {
         if (d > 0.5) discard;
         float alpha = smoothstep(0.5, 0.05, d);
         vec3 color = mix(uColorA, uColorB, clamp(vElev, 0.0, 1.0));
-        color += vGlow * vec3(0.55, 1.0, 0.85);
+        color += vGlow * vec3(1.0, 0.95, 0.55);
         gl_FragColor = vec4(color, alpha * (0.4 + vElev * 0.35 + vGlow * 0.6));
       }
     `,
