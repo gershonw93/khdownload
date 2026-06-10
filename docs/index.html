@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickTok Marketing — Google Maps Ranking, Custom Software & Automation</title>
+  <meta name="description" content="ClickTok Marketing puts your business on the map. Google Maps ranking that drives calls, plus custom software and automation that run your back office while you sleep." />
+  <meta property="og:title" content="ClickTok Marketing — We put your business on the map" />
+  <meta property="og:description" content="Google Maps ranking, custom software & automation." />
+  <meta name="theme-color" content="#07080c" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%2300e5a0'/%3E%3Ccircle cx='50' cy='50' r='18' fill='%2307080c'/%3E%3C/svg%3E" />
+  <link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-loading>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <span class="preloader__letter">C</span><span class="preloader__letter">L</span><span class="preloader__letter">I</span><span class="preloader__letter">C</span><span class="preloader__letter">K</span><span class="preloader__letter preloader__letter--accent">T</span><span class="preloader__letter preloader__letter--accent">O</span><span class="preloader__letter preloader__letter--accent">K</span>
+      </div>
+      <div class="preloader__count" id="preloaderCount">0</div>
+    </div>
+    <div class="preloader__curtain"></div>
+  </div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label"></div>
+  </div>
+
+  <!-- Click spark layer -->
+  <canvas class="sparks" id="sparks" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" data-cursor="hover" aria-label="ClickTok home">
+      <span class="nav__logo-pin">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="12" cy="10" r="2.6" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="nav__logo-text">Click<em>Tok</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#services" data-cursor="hover" class="nav__link"><span>Services</span></a>
+      <a href="#process" data-cursor="hover" class="nav__link"><span>Process</span></a>
+      <a href="#why" data-cursor="hover" class="nav__link"><span>Why us</span></a>
+      <a href="#contact" data-cursor="hover" class="nav__link"><span>Contact</span></a>
+    </nav>
+    <a class="btn btn--small magnetic" href="mailto:gershon@clicktokmarketing.com" data-cursor="hover">
+      <span class="btn__bg"></span><span class="btn__label">Book a call</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#services" class="menu__link">Services</a>
+      <a href="#process" class="menu__link">Process</a>
+      <a href="#why" class="menu__link">Why us</a>
+      <a href="#contact" class="menu__link">Contact</a>
+    </nav>
+    <a class="menu__cta" href="mailto:gershon@clicktokmarketing.com">gershon@clicktokmarketing.com</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__vignette" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>ClickTok Marketing · Growth, engineered</p>
+        <h1 class="hero__title" id="heroTitle">
+          <span class="hero__line">We put your</span>
+          <span class="hero__line">business <em>on</em></span>
+          <span class="hero__line"><em>the map.</em></span>
+        </h1>
+        <p class="hero__sub">Google Maps ranking that makes the phone ring — backed by custom
+          software and automation that run the busywork while you sleep.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary magnetic" href="#contact" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">Get found on Google</span>
+          </a>
+          <a class="btn btn--ghost magnetic" href="#services" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">Explore services</span>
+          </a>
+        </div>
+        <p class="hero__hint" aria-hidden="true">Psst — click the terrain.</p>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
+        <span class="hero__scroll-text">scroll</span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <div class="marquee__group">
+          <span>Google Maps Ranking</span><i>✦</i>
+          <span>Custom Software</span><i>✦</i>
+          <span>Automation</span><i>✦</i>
+          <span>Local SEO</span><i>✦</i>
+          <span>Lead Generation</span><i>✦</i>
+        </div>
+        <div class="marquee__group">
+          <span>Google Maps Ranking</span><i>✦</i>
+          <span>Custom Software</span><i>✦</i>
+          <span>Automation</span><i>✦</i>
+          <span>Local SEO</span><i>✦</i>
+          <span>Lead Generation</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">01 — What we do</p>
+          <h2 class="section__title" data-reveal>Three ways we make<br/>you <em>unmissable</em>.</h2>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="card" data-tilt data-cursor="card" tabindex="0">
+            <div class="card__glare" aria-hidden="true"></div>
+            <div class="card__inner">
+              <div class="card__top">
+                <span class="card__num">01</span>
+                <div class="card__icon card__icon--maps" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <path class="icon-pin" d="M24 42s-13-10.4-13-20a13 13 0 1 1 26 0c0 9.6-13 20-13 20Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                    <circle class="icon-pin-dot" cx="24" cy="21" r="4.5" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="card__title">Google Maps<br/>Ranking</h3>
+              <p class="card__desc">Own the Map Pack. We optimize your Google Business Profile, build
+                local authority, and push you into the top 3 — where the calls actually happen.</p>
+              <div class="card__rank" aria-hidden="true">
+                <div class="card__rank-bar" style="--h:38%"><b>#7</b></div>
+                <div class="card__rank-bar" style="--h:58%"><b>#4</b></div>
+                <div class="card__rank-bar card__rank-bar--win" style="--h:92%"><b>#1</b></div>
+              </div>
+              <ul class="card__list">
+                <li>Google Business Profile optimization</li>
+                <li>Reviews &amp; reputation engine</li>
+                <li>Local citations &amp; authority building</li>
+                <li>Geo-grid rank tracking &amp; reporting</li>
+              </ul>
+              <span class="card__more" aria-hidden="true">Tap to expand <i>+</i></span>
+            </div>
+          </article>
+
+          <article class="card" data-tilt data-cursor="card" tabindex="0">
+            <div class="card__glare" aria-hidden="true"></div>
+            <div class="card__inner">
+              <div class="card__top">
+                <span class="card__num">02</span>
+                <div class="card__icon card__icon--code" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <path class="icon-chev-l" d="M18 16 10 24l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="icon-chev-r" d="m30 16 8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="icon-slash" d="M27 12 21 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="card__title">Custom<br/>Software</h3>
+              <p class="card__desc">Tools built around your business — not the other way around.
+                Dashboards, portals, and integrations shipped fast, without enterprise bloat.</p>
+              <div class="card__code" aria-hidden="true">
+                <span class="card__code-dot"></span><span class="card__code-dot"></span><span class="card__code-dot"></span>
+                <code><span class="t-key">const</span> growth = <span class="t-fn">build</span>(<span class="t-str">'your idea'</span>);</code>
+              </div>
+              <ul class="card__list">
+                <li>Web apps &amp; internal dashboards</li>
+                <li>Client portals &amp; booking systems</li>
+                <li>API &amp; CRM integrations</li>
+                <li>Rapid MVPs that validate fast</li>
+              </ul>
+              <span class="card__more" aria-hidden="true">Tap to expand <i>+</i></span>
+            </div>
+          </article>
+
+          <article class="card" data-tilt data-cursor="card" tabindex="0">
+            <div class="card__glare" aria-hidden="true"></div>
+            <div class="card__inner">
+              <div class="card__top">
+                <span class="card__num">03</span>
+                <div class="card__icon card__icon--auto" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <circle class="icon-node icon-node--1" cx="10" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
+                    <circle class="icon-node icon-node--2" cx="24" cy="12" r="4" stroke="currentColor" stroke-width="2.5"/>
+                    <circle class="icon-node icon-node--3" cx="24" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+                    <circle class="icon-node icon-node--4" cx="38" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
+                    <path class="icon-wire" d="M13.5 21.5 20.5 14.5M13.5 26.5l7 7M27.5 14.5l7 7M27.5 33.5l7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="card__title">Automation<br/>&amp; AI</h3>
+              <p class="card__desc">Kill the busywork. We wire your lead flow, follow-ups, reviews,
+                and reporting into automations that never call in sick.</p>
+              <div class="card__flow" aria-hidden="true">
+                <span>Lead</span><b>→</b><span>Follow-up</span><b>→</b><span class="card__flow-win">Booked</span>
+              </div>
+              <ul class="card__list">
+                <li>Instant lead capture &amp; routing</li>
+                <li>AI follow-up, chat &amp; review requests</li>
+                <li>Zapier / Make / custom pipelines</li>
+                <li>Auto-reporting you'll actually read</li>
+              </ul>
+              <span class="card__more" aria-hidden="true">Tap to expand <i>+</i></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">02 — How it works</p>
+          <h2 class="section__title" data-reveal>From invisible<br/>to <em>inevitable</em>.</h2>
+        </div>
+      </div>
+      <div class="process__wrap" id="processWrap">
+        <div class="process__track" id="processTrack">
+          <article class="step" data-cursor="hover">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Audit</h3>
+            <p class="step__desc">We map your market: where you rank, who outranks you, and exactly
+              why. No fluff — a geo-grid snapshot of reality.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Optimize</h3>
+            <p class="step__desc">Profile, categories, reviews, citations, site signals — every lever
+              tuned so Google has no excuse not to show you.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Rank</h3>
+            <p class="step__desc">You climb into the Map Pack and the calls start. We track every
+              keyword on a live grid so you watch it happen.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Automate</h3>
+            <p class="step__desc">Custom software and automations catch every lead, follow up
+              instantly, and report back — growth on autopilot.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ============ -->
+    <section class="why section" id="why">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">03 — Why ClickTok</p>
+        </div>
+        <p class="why__statement" id="whyStatement">
+          Most agencies sell you reports. We build you a machine — one that ranks, captures,
+          follows up, and books — so every search becomes a customer and every customer
+          becomes a review that ranks you higher. That's the loop. We engineer it.
+        </p>
+        <div class="why__chips" id="whyChips">
+          <span class="chip" data-cursor="hover">Top-3 Map Pack focus</span>
+          <span class="chip" data-cursor="hover">Software, not spreadsheets</span>
+          <span class="chip" data-cursor="hover">Automation-first</span>
+          <span class="chip" data-cursor="hover">One partner, full stack</span>
+          <span class="chip" data-cursor="hover">No long-term lock-in</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <p class="section__eyebrow">04 — Say hello</p>
+        <h2 class="contact__title" data-reveal>Let's make you<br/><em>unmissable</em>.</h2>
+        <p class="contact__sub">Tell us about your business. We'll tell you exactly how we'd rank it —
+          free, no strings.</p>
+        <a class="btn btn--primary btn--big magnetic" id="contactBtn" href="mailto:gershon@clicktokmarketing.com?subject=Put%20me%20on%20the%20map" data-cursor="hover">
+          <span class="btn__bg"></span><span class="btn__label">gershon@clicktokmarketing.com</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> ClickTok Marketing. All rights reserved.</p>
+      <p class="footer__tag">Google Maps Ranking · Custom Software · Automation</p>
+    </div>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+  <script type="module" src="js/hero-scene.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
