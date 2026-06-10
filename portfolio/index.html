@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <script>document.documentElement.classList.add("js");</script>
+  <title>Elara Voss — UI/UX &amp; Interaction Designer</title>
+  <meta name="description" content="Elara Voss is a UI/UX and interaction designer crafting expressive digital products — interfaces with feeling." />
+  <meta property="og:title" content="Elara Voss — UI/UX & Interaction Designer" />
+  <meta property="og:description" content="Interfaces with feeling. Portfolio 2026." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230a0a0b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23d9ff3f' font-family='sans-serif' font-weight='700'>EV</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__brand">EV<span class="accent">©</span></div>
+      <div class="preloader__count"><span id="preloader-count">0</span></div>
+      <div class="preloader__bar"><span id="preloader-bar"></span></div>
+    </div>
+    <div class="preloader__panel preloader__panel--l"></div>
+    <div class="preloader__panel preloader__panel--r"></div>
+  </div>
+
+  <!-- ===== Custom cursor (desktop only) ===== -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+  </div>
+
+  <!-- ===== WebGL backdrop ===== -->
+  <canvas id="webgl" class="webgl" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" data-cursor="link">Elara<span class="accent">&nbsp;Voss</span><sup>©</sup></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work" data-cursor="link"><span data-text="Work">Work</span><i>01</i></a>
+      <a href="#about" data-cursor="link"><span data-text="About">About</span><i>02</i></a>
+      <a href="#services" data-cursor="link"><span data-text="Craft">Craft</span><i>03</i></a>
+      <a href="#contact" data-cursor="link"><span data-text="Contact">Contact</span><i>04</i></a>
+    </nav>
+    <div class="nav__meta">
+      <span class="nav__status"><i class="dot"></i>Open for work</span>
+      <span class="nav__time" id="local-time">00:00</span>
+    </div>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== Mobile / fullscreen menu ===== -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Menu">
+      <a href="#work" class="menu__link"><i>01</i>Work</a>
+      <a href="#about" class="menu__link"><i>02</i>About</a>
+      <a href="#services" class="menu__link"><i>03</i>Craft</a>
+      <a href="#contact" class="menu__link"><i>04</i>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="mailto:hello@elaravoss.studio">hello@elaravoss.studio</a>
+      <span>Tokyo — Remote, worldwide</span>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <p class="hero__eyebrow" data-reveal>
+        <span>Elara Voss</span><span class="sep">—</span><span>UI/UX &amp; Interaction Design</span><span class="sep">—</span><span>Folio 2026</span>
+      </p>
+      <h1 class="hero__title">
+        <span class="hero__line"><span class="split" data-split>INTERFACES</span></span>
+        <span class="hero__line hero__line--mix">
+          <span class="hero__with split" data-split>with</span>
+          <em class="hero__feeling split" data-split>feeling</em>
+          <span class="hero__star" aria-hidden="true">✳</span>
+        </span>
+      </h1>
+      <div class="hero__bottom">
+        <p class="hero__desc" data-reveal>
+          Independent designer crafting expressive digital products,
+          design systems and motion for brands that refuse to be boring.
+        </p>
+        <div class="hero__cta" data-reveal>
+          <a href="#work" class="btn btn--ghost" data-magnetic data-cursor="link">
+            <span>Selected work</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+          </a>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="hero__scroll-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee-track">
+        <div class="marquee__group">
+          <span>Product Design</span><em>✳</em><span>Design Systems</span><em>✳</em>
+          <span>Interaction</span><em>✳</em><span>Motion</span><em>✳</em>
+          <span>Prototyping</span><em>✳</em><span>Art Direction</span><em>✳</em>
+        </div>
+        <div class="marquee__group">
+          <span>Product Design</span><em>✳</em><span>Design Systems</span><em>✳</em>
+          <span>Interaction</span><em>✳</em><span>Motion</span><em>✳</em>
+          <span>Prototyping</span><em>✳</em><span>Art Direction</span><em>✳</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Selected work ===== -->
+    <section class="work" id="work">
+      <header class="section-head">
+        <span class="section-head__index" data-reveal>(01)</span>
+        <h2 class="section-head__title"><span class="split" data-split>Selected work</span></h2>
+        <p class="section-head__note" data-reveal>2024 — 2026. Four projects, zero templates.</p>
+      </header>
+
+      <ul class="work__list">
+        <li class="work__item" data-work>
+          <a href="#contact" class="work__card" data-cursor="view">
+            <figure class="work__media">
+              <div class="work__art" data-parallax>
+                <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Lumen Bank cover art">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#101019"/><stop offset=".55" stop-color="#2b2470"/><stop offset="1" stop-color="#d9ff3f"/>
+                    </linearGradient>
+                    <radialGradient id="g1b" cx=".25" cy=".25" r=".9">
+                      <stop offset="0" stop-color="#6e3bff" stop-opacity=".85"/><stop offset="1" stop-color="#6e3bff" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+                  <rect width="800" height="600" fill="url(#g1)"/>
+                  <rect width="800" height="600" fill="url(#g1b)"/>
+                  <circle cx="610" cy="170" r="130" fill="none" stroke="#f2f0ea" stroke-opacity=".5" stroke-width="1.5"/>
+                  <circle cx="610" cy="170" r="86" fill="#d9ff3f" fill-opacity=".9"/>
+                  <path d="M0 470 Q 200 360 420 460 T 800 420 V 600 H 0 Z" fill="#0a0a0b" fill-opacity=".55"/>
+                  <text x="100" y="540" font-family="monospace" font-size="26" fill="#f2f0ea" opacity=".75">LMN — 24/7 BANKING</text>
+                </svg>
+              </div>
+              <span class="work__num" aria-hidden="true">01</span>
+            </figure>
+            <div class="work__info">
+              <h3 class="work__name">Lumen Bank</h3>
+              <p class="work__role">Fintech app — Mobile UX, Design system</p>
+              <span class="work__year">2026</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="work__item" data-work>
+          <a href="#contact" class="work__card" data-cursor="view">
+            <figure class="work__media">
+              <div class="work__art" data-parallax>
+                <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Orbit OS cover art">
+                  <defs>
+                    <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+                      <stop offset="0" stop-color="#070709"/><stop offset=".6" stop-color="#123c3a"/><stop offset="1" stop-color="#16e0bd"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="800" height="600" fill="url(#g2)"/>
+                  <ellipse cx="400" cy="300" rx="320" ry="120" fill="none" stroke="#16e0bd" stroke-opacity=".7" stroke-width="1.5" transform="rotate(-18 400 300)"/>
+                  <ellipse cx="400" cy="300" rx="240" ry="86" fill="none" stroke="#f2f0ea" stroke-opacity=".35" stroke-width="1" transform="rotate(-18 400 300)"/>
+                  <circle cx="400" cy="300" r="74" fill="#0a0a0b"/>
+                  <circle cx="400" cy="300" r="74" fill="none" stroke="#d9ff3f" stroke-width="2"/>
+                  <circle cx="666" cy="216" r="14" fill="#d9ff3f"/>
+                  <text x="100" y="540" font-family="monospace" font-size="26" fill="#f2f0ea" opacity=".75">ORB — SPATIAL DESKTOP</text>
+                </svg>
+              </div>
+              <span class="work__num" aria-hidden="true">02</span>
+            </figure>
+            <div class="work__info">
+              <h3 class="work__name">Orbit OS</h3>
+              <p class="work__role">Spatial productivity suite — UX, Motion</p>
+              <span class="work__year">2025</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="work__item" data-work>
+          <a href="#contact" class="work__card" data-cursor="view">
+            <figure class="work__media">
+              <div class="work__art" data-parallax>
+                <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hana Health cover art">
+                  <defs>
+                    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#1c0f14"/><stop offset=".65" stop-color="#74283f"/><stop offset="1" stop-color="#ff7a9b"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="800" height="600" fill="url(#g3)"/>
+                  <g fill="none" stroke="#ffd7e1" stroke-opacity=".8" stroke-width="1.5">
+                    <path d="M400 140 q 90 70 0 170 q -90 -100 0 -170 Z"/>
+                    <path d="M400 140 q 90 70 0 170 q -90 -100 0 -170 Z" transform="rotate(72 400 260)"/>
+                    <path d="M400 140 q 90 70 0 170 q -90 -100 0 -170 Z" transform="rotate(144 400 260)"/>
+                    <path d="M400 140 q 90 70 0 170 q -90 -100 0 -170 Z" transform="rotate(216 400 260)"/>
+                    <path d="M400 140 q 90 70 0 170 q -90 -100 0 -170 Z" transform="rotate(288 400 260)"/>
+                  </g>
+                  <circle cx="400" cy="260" r="26" fill="#d9ff3f"/>
+                  <path d="M0 500 Q 250 430 460 500 T 800 480 V 600 H 0 Z" fill="#0a0a0b" fill-opacity=".5"/>
+                  <text x="100" y="540" font-family="monospace" font-size="26" fill="#f2f0ea" opacity=".75">HNA — BREATHE IN</text>
+                </svg>
+              </div>
+              <span class="work__num" aria-hidden="true">03</span>
+            </figure>
+            <div class="work__info">
+              <h3 class="work__name">Hana Health</h3>
+              <p class="work__role">Wellness companion — Product design</p>
+              <span class="work__year">2025</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="work__item" data-work>
+          <a href="#contact" class="work__card" data-cursor="view">
+            <figure class="work__media">
+              <div class="work__art" data-parallax>
+                <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Vanta Audio cover art">
+                  <defs>
+                    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#0a0a0b"/><stop offset=".7" stop-color="#2c2c31"/><stop offset="1" stop-color="#8a8a93"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="800" height="600" fill="url(#g4)"/>
+                  <g fill="none" stroke="#f2f0ea" stroke-width="1.5">
+                    <circle cx="400" cy="300" r="190" stroke-opacity=".25"/>
+                    <circle cx="400" cy="300" r="150" stroke-opacity=".4"/>
+                    <circle cx="400" cy="300" r="110" stroke-opacity=".6"/>
+                    <circle cx="400" cy="300" r="70" stroke-opacity=".9"/>
+                  </g>
+                  <circle cx="400" cy="300" r="30" fill="#d9ff3f"/>
+                  <rect x="100" y="92" width="120" height="36" rx="18" fill="none" stroke="#d9ff3f" stroke-width="1.5"/>
+                  <text x="124" y="116" font-family="monospace" font-size="20" fill="#d9ff3f">VANTA</text>
+                  <text x="100" y="540" font-family="monospace" font-size="26" fill="#f2f0ea" opacity=".75">VNT — PURE SIGNAL</text>
+                </svg>
+              </div>
+              <span class="work__num" aria-hidden="true">04</span>
+            </figure>
+            <div class="work__info">
+              <h3 class="work__name">Vanta Audio</h3>
+              <p class="work__role">Hi-fi e-commerce — Web, Art direction</p>
+              <span class="work__year">2024</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about" id="about">
+      <header class="section-head">
+        <span class="section-head__index" data-reveal>(02)</span>
+        <h2 class="section-head__title"><span class="split" data-split>About</span></h2>
+        <p class="section-head__note" data-reveal>The person behind the pixels.</p>
+      </header>
+      <p class="about__statement" id="about-statement">
+        I believe interfaces should feel like places, not pages.
+        For eight years I have designed products that people open
+        out of habit and stay in out of love — pairing rigorous
+        systems thinking with motion that earns its milliseconds.
+      </p>
+      <ul class="about__stats">
+        <li data-reveal><strong data-count="8">0</strong><span>years of practice</span></li>
+        <li data-reveal><strong data-count="64">0</strong><span>products shipped</span></li>
+        <li data-reveal><strong data-count="12">0</strong><span>design awards</span></li>
+        <li data-reveal><strong data-count="4">0</strong><span>continents of clients</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="services" id="services">
+      <header class="section-head">
+        <span class="section-head__index" data-reveal>(03)</span>
+        <h2 class="section-head__title"><span class="split" data-split>Craft</span></h2>
+        <p class="section-head__note" data-reveal>What I do, end to end.</p>
+      </header>
+      <ul class="services__list">
+        <li class="service" data-service>
+          <a href="#contact" data-cursor="link">
+            <span class="service__idx">01</span>
+            <h3 class="service__name">Product Design</h3>
+            <p class="service__desc">From fuzzy brief to shipped flagship — strategy, flows, UI.</p>
+            <span class="service__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="service" data-service>
+          <a href="#contact" data-cursor="link">
+            <span class="service__idx">02</span>
+            <h3 class="service__name">Design Systems</h3>
+            <p class="service__desc">Tokens, components and docs your engineers will actually use.</p>
+            <span class="service__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="service" data-service>
+          <a href="#contact" data-cursor="link">
+            <span class="service__idx">03</span>
+            <h3 class="service__name">Interaction &amp; Motion</h3>
+            <p class="service__desc">Micro-interactions and choreography that make products feel alive.</p>
+            <span class="service__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="service" data-service>
+          <a href="#contact" data-cursor="link">
+            <span class="service__idx">04</span>
+            <h3 class="service__name">Prototyping &amp; Research</h3>
+            <p class="service__desc">High-fidelity prototypes, tested with humans before code.</p>
+            <span class="service__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact">
+      <p class="contact__kicker" data-reveal>Have an idea that deserves better?</p>
+      <h2 class="contact__title">
+        <span class="split" data-split>Let’s make</span><br/>
+        <em class="split" data-split>something rare</em>
+      </h2>
+      <a class="btn btn--big" href="mailto:hello@elaravoss.studio" data-magnetic data-cursor="link">
+        <span>hello@elaravoss.studio</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7m0 0H8m9 0v9"/></svg>
+      </a>
+      <ul class="contact__socials" data-reveal>
+        <li><a href="#" data-cursor="link">Twitter / X</a></li>
+        <li><a href="#" data-cursor="link">Dribbble</a></li>
+        <li><a href="#" data-cursor="link">LinkedIn</a></li>
+        <li><a href="#" data-cursor="link">Instagram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span>© 2026 Elara Voss</span>
+      <span>Tokyo — Remote, worldwide</span>
+      <button class="footer__top-btn" id="to-top" data-cursor="link">Back to top ↑</button>
+    </div>
+    <div class="footer__wordmark" aria-hidden="true">ELARA&nbsp;VOSS</div>
+  </footer>
+
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/vendor/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
