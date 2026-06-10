@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Google Ranking — ClickTok Marketing</title>
+  <meta name="description" content="Show up in Google's top 3 when locals search for what you do. Google Business Profile optimization, reviews, citations, and geo-grid tracking." />
+  <meta name="theme-color" content="#0a0a08" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23f7df4d'/%3E%3Cpath d='M32 26l42 20-18 6-6 18z' fill='%230a0a08'/%3E%3C/svg%3E" />
+  <link rel="preload" href="../fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label"></div>
+  </div>
+
+  <canvas class="sparks" id="sparks" aria-hidden="true"></canvas>
+
+  <header class="nav nav--scrolled" id="nav">
+    <a class="nav__logo" href="../index.html" data-cursor="hover" aria-label="ClickTok home">
+      <span class="nav__logo-pin">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 4l15 7-6.4 2.1L11.5 19 5 4Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="nav__logo-text">click<em>tok</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__drop">
+        <a href="../index.html#fix" data-cursor="hover" class="nav__link"><span>Services<i>▼</i></span></a>
+        <div class="nav__drop-panel">
+          <a href="maps.html">Local Google Ranking</a>
+          <a href="websites.html">Website Design &amp; Build</a>
+          <a href="ads.html">Paid Ads</a>
+          <a href="automation.html">Process Automation</a>
+          <a href="software.html">Custom Software</a>
+        </div>
+      </div>
+      <a href="../index.html#process" data-cursor="hover" class="nav__link"><span>How it works</span></a>
+      <a href="../index.html#why" data-cursor="hover" class="nav__link"><span>Why us</span></a>
+      <a href="#contact" data-cursor="hover" class="nav__link"><span>Contact</span></a>
+    </nav>
+    <a class="btn btn--small magnetic" href="#contact" data-cursor="hover">
+      <span class="btn__bg"></span><span class="btn__label">Free growth audit</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="../index.html#fix" class="menu__link">Services</a>
+      <a href="../index.html#process" class="menu__link">How it works</a>
+      <a href="../index.html#why" class="menu__link">Why us</a>
+      <a href="#contact" class="menu__link">Contact</a>
+    </nav>
+    <nav class="menu__services" aria-label="Services">
+      <a href="maps.html">Local Google Ranking</a>
+      <a href="websites.html">Website Design &amp; Build</a>
+      <a href="ads.html">Paid Ads</a>
+      <a href="automation.html">Process Automation</a>
+      <a href="software.html">Custom Software</a>
+    </nav>
+    <a class="menu__cta" href="mailto:gershon@clicktokmarketing.com">gershon@clicktokmarketing.com</a>
+  </div>
+
+  <main id="top">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Service — Local Google Ranking</p>
+        <h1 class="page-hero__title">Own your <em>local map</em>.</h1>
+        <p class="page-hero__sub">When someone nearby searches for what you do, the top 3 map results get the calls. Everyone else gets scrolled past. We get you into that top 3 — and keep you there.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary magnetic" href="#contact" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">Get my free local visibility audit</span>
+          </a>
+          <a class="btn btn--ghost magnetic" href="../index.html#fix" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">See all services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">01 — What you get</p>
+          <h2 class="section__title" data-reveal>Everything it takes<br/>to <em>rank</em>.</h2>
+        </div>
+        <div class="feat__grid">
+          <div class="feat" data-tilt>
+            <span class="feat__num">01</span>
+            <h3>Profile optimization</h3>
+            <p>Your Google Business Profile tuned to exactly what Google rewards: categories, services, photos, posts, Q&A.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">02</span>
+            <h3>Review engine</h3>
+            <p>A steady stream of real reviews from real customers, with responses that build trust and rankings.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">03</span>
+            <h3>Citations & local authority</h3>
+            <p>Consistent listings and local signals across the directories Google actually checks.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">04</span>
+            <h3>Geo-grid rank tracking</h3>
+            <p>See your ranking on a live map grid, street by street — not a vague "position 4" average.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">05</span>
+            <h3>Local content signals</h3>
+            <p>Location pages and content that prove to Google you serve the areas you serve.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">06</span>
+            <h3>Spam fighting</h3>
+            <p>Fake competitor listings and keyword-stuffed names dragging you down? We report and remove them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" style="border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">02 — How it goes</p>
+          <h2 class="section__title" data-reveal>Simple on purpose.</h2>
+        </div>
+        <div class="steps__grid">
+          <article class="step" data-cursor="hover">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Audit the grid</h3>
+            <p class="step__desc">A geo-grid snapshot of where you rank right now, block by block, and exactly who outranks you and why.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Tune every signal</h3>
+            <p class="step__desc">Profile, reviews, citations, site signals — every lever Google looks at, optimized.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Climb the pack</h3>
+            <p class="step__desc">You watch yourself climb into the top 3 on the live grid as the signals compound.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Hold the spot</h3>
+            <p class="step__desc">Rankings aren't set-and-forget. We defend the position and keep the review engine running.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <p class="section__eyebrow">03 — Say hello</p>
+        <h2 class="contact__title" data-reveal>Ready to get<br/><em>found</em>?</h2>
+        <p class="contact__sub">We'll map exactly where you rank in your service area — free, no strings.</p>
+        <a class="btn btn--primary btn--big magnetic" href="mailto:gershon@clicktokmarketing.com?subject=Local%20visibility%20audit" data-cursor="hover">
+          <span class="btn__bg"></span><span class="btn__label">gershon@clicktokmarketing.com</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav" aria-label="Services">
+      <a href="maps.html">Local Google Ranking</a>
+      <a href="websites.html">Website Design &amp; Build</a>
+      <a href="ads.html">Paid Ads</a>
+      <a href="automation.html">Process Automation</a>
+      <a href="software.html">Custom Software</a>
+    </nav>
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> ClickTok Marketing. All rights reserved.</p>
+      <p class="footer__tag">Find the bottleneck. Fix it. Grow.</p>
+    </div>
+  </footer>
+
+  <script src="../vendor/gsap.min.js"></script>
+  <script src="../vendor/ScrollTrigger.min.js"></script>
+  <script src="../vendor/lenis.min.js"></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

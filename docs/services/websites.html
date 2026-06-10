@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design & Build — ClickTok Marketing</title>
+  <meta name="description" content="Conversion-first websites that turn visitors into booked calls. Custom design, fast builds, SEO-ready foundations." />
+  <meta name="theme-color" content="#0a0a08" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23f7df4d'/%3E%3Cpath d='M32 26l42 20-18 6-6 18z' fill='%230a0a08'/%3E%3C/svg%3E" />
+  <link rel="preload" href="../fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label"></div>
+  </div>
+
+  <canvas class="sparks" id="sparks" aria-hidden="true"></canvas>
+
+  <header class="nav nav--scrolled" id="nav">
+    <a class="nav__logo" href="../index.html" data-cursor="hover" aria-label="ClickTok home">
+      <span class="nav__logo-pin">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 4l15 7-6.4 2.1L11.5 19 5 4Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="nav__logo-text">click<em>tok</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__drop">
+        <a href="../index.html#fix" data-cursor="hover" class="nav__link"><span>Services<i>▼</i></span></a>
+        <div class="nav__drop-panel">
+          <a href="maps.html">Local Google Ranking</a>
+          <a href="websites.html">Website Design &amp; Build</a>
+          <a href="ads.html">Paid Ads</a>
+          <a href="automation.html">Process Automation</a>
+          <a href="software.html">Custom Software</a>
+        </div>
+      </div>
+      <a href="../index.html#process" data-cursor="hover" class="nav__link"><span>How it works</span></a>
+      <a href="../index.html#why" data-cursor="hover" class="nav__link"><span>Why us</span></a>
+      <a href="#contact" data-cursor="hover" class="nav__link"><span>Contact</span></a>
+    </nav>
+    <a class="btn btn--small magnetic" href="#contact" data-cursor="hover">
+      <span class="btn__bg"></span><span class="btn__label">Free growth audit</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="../index.html#fix" class="menu__link">Services</a>
+      <a href="../index.html#process" class="menu__link">How it works</a>
+      <a href="../index.html#why" class="menu__link">Why us</a>
+      <a href="#contact" class="menu__link">Contact</a>
+    </nav>
+    <nav class="menu__services" aria-label="Services">
+      <a href="maps.html">Local Google Ranking</a>
+      <a href="websites.html">Website Design &amp; Build</a>
+      <a href="ads.html">Paid Ads</a>
+      <a href="automation.html">Process Automation</a>
+      <a href="software.html">Custom Software</a>
+    </nav>
+    <a class="menu__cta" href="mailto:gershon@clicktokmarketing.com">gershon@clicktokmarketing.com</a>
+  </div>
+
+  <main id="top">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Service — Website Design & Build</p>
+        <h1 class="page-hero__title">Websites built<br/>to <em>convert</em>.</h1>
+        <p class="page-hero__sub">A website isn't a brochure — it's your hardest-working salesperson. We design and build sites with one job: turning visitors into booked calls.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary magnetic" href="#contact" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">Get my free website teardown</span>
+          </a>
+          <a class="btn btn--ghost magnetic" href="../index.html#fix" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">See all services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">01 — What you get</p>
+          <h2 class="section__title" data-reveal>Designed to sell,<br/>built to <em>last</em>.</h2>
+        </div>
+        <div class="feat__grid">
+          <div class="feat" data-tilt>
+            <span class="feat__num">01</span>
+            <h3>Conversion-first design</h3>
+            <p>Every section earns its place. Clear offer, clear proof, clear next step — no decorative filler.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">02</span>
+            <h3>Copy that sells</h3>
+            <p>Words that sound like you and speak to your customer's actual problem. No corporate mush.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">03</span>
+            <h3>Seriously fast</h3>
+            <p>Built for Core Web Vitals. Fast sites rank better and convert better — slow ones bleed leads.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">04</span>
+            <h3>SEO-ready foundation</h3>
+            <p>Clean structure, schema, and metadata from day one, so Google understands every page.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">05</span>
+            <h3>Mobile-first</h3>
+            <p>Most of your visitors are on a phone. The mobile experience is designed first, not shrunk down after.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">06</span>
+            <h3>Tracking wired in</h3>
+            <p>Calls, forms, and clicks tracked from launch, so you know what the site is actually producing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" style="border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">02 — How it goes</p>
+          <h2 class="section__title" data-reveal>Simple on purpose.</h2>
+        </div>
+        <div class="steps__grid">
+          <article class="step" data-cursor="hover">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Strategy</h3>
+            <p class="step__desc">Who's the customer, what's the offer, what should the site make happen. We nail this before pixels.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Design</h3>
+            <p class="step__desc">A custom design around your brand and your funnel — reviewed with you, not sprung on you.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Build</h3>
+            <p class="step__desc">Fast, clean, responsive code. No bloated page builders that crawl on mobile.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Launch & optimize</h3>
+            <p class="step__desc">We launch, measure real visitor behavior, and tighten the funnel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <p class="section__eyebrow">03 — Say hello</p>
+        <h2 class="contact__title" data-reveal>Want a site that<br/><em>sells</em>?</h2>
+        <p class="contact__sub">Send us your current site. We'll tell you exactly where it's leaking leads — free.</p>
+        <a class="btn btn--primary btn--big magnetic" href="mailto:gershon@clicktokmarketing.com?subject=Website%20teardown" data-cursor="hover">
+          <span class="btn__bg"></span><span class="btn__label">gershon@clicktokmarketing.com</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav" aria-label="Services">
+      <a href="maps.html">Local Google Ranking</a>
+      <a href="websites.html">Website Design &amp; Build</a>
+      <a href="ads.html">Paid Ads</a>
+      <a href="automation.html">Process Automation</a>
+      <a href="software.html">Custom Software</a>
+    </nav>
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> ClickTok Marketing. All rights reserved.</p>
+      <p class="footer__tag">Find the bottleneck. Fix it. Grow.</p>
+    </div>
+  </footer>
+
+  <script src="../vendor/gsap.min.js"></script>
+  <script src="../vendor/ScrollTrigger.min.js"></script>
+  <script src="../vendor/lenis.min.js"></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

@@ -1,7 +1,19 @@
 # ClickTok Marketing — website
 
-A single-page, fully static site. No build step — deploy the `docs/` folder
+A fully static multi-page site. No build step — deploy the `docs/` folder
 anywhere (GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any web host).
+
+## Structure
+- `index.html` — the funnel: outcome-led hero → "What's holding you back?"
+  diagnostic (routes visitors to the right service) → process → why → one CTA
+- `services/maps.html` — Local Google Ranking
+- `services/websites.html` — Website Design & Build
+- `services/ads.html` — Paid Ads
+- `services/automation.html` — Process Automation
+- `services/software.html` — Custom Software
+- `clicktok-*.html` — self-contained standalone bundles of each page for
+  local preview (download into one folder and the links work); not needed
+  for deployment
 
 ## Stack
 - **Three.js** — interactive particle-terrain hero (hover ripples, click shockwaves)

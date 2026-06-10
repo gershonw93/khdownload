@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Software — ClickTok Marketing</title>
+  <meta name="description" content="Dashboards, client portals, integrations, and MVPs built around how your business actually works. You own the code." />
+  <meta name="theme-color" content="#0a0a08" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23f7df4d'/%3E%3Cpath d='M32 26l42 20-18 6-6 18z' fill='%230a0a08'/%3E%3C/svg%3E" />
+  <link rel="preload" href="../fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label"></div>
+  </div>
+
+  <canvas class="sparks" id="sparks" aria-hidden="true"></canvas>
+
+  <header class="nav nav--scrolled" id="nav">
+    <a class="nav__logo" href="../index.html" data-cursor="hover" aria-label="ClickTok home">
+      <span class="nav__logo-pin">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 4l15 7-6.4 2.1L11.5 19 5 4Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="nav__logo-text">click<em>tok</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__drop">
+        <a href="../index.html#fix" data-cursor="hover" class="nav__link"><span>Services<i>▼</i></span></a>
+        <div class="nav__drop-panel">
+          <a href="maps.html">Local Google Ranking</a>
+          <a href="websites.html">Website Design &amp; Build</a>
+          <a href="ads.html">Paid Ads</a>
+          <a href="automation.html">Process Automation</a>
+          <a href="software.html">Custom Software</a>
+        </div>
+      </div>
+      <a href="../index.html#process" data-cursor="hover" class="nav__link"><span>How it works</span></a>
+      <a href="../index.html#why" data-cursor="hover" class="nav__link"><span>Why us</span></a>
+      <a href="#contact" data-cursor="hover" class="nav__link"><span>Contact</span></a>
+    </nav>
+    <a class="btn btn--small magnetic" href="#contact" data-cursor="hover">
+      <span class="btn__bg"></span><span class="btn__label">Free growth audit</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="../index.html#fix" class="menu__link">Services</a>
+      <a href="../index.html#process" class="menu__link">How it works</a>
+      <a href="../index.html#why" class="menu__link">Why us</a>
+      <a href="#contact" class="menu__link">Contact</a>
+    </nav>
+    <nav class="menu__services" aria-label="Services">
+      <a href="maps.html">Local Google Ranking</a>
+      <a href="websites.html">Website Design &amp; Build</a>
+      <a href="ads.html">Paid Ads</a>
+      <a href="automation.html">Process Automation</a>
+      <a href="software.html">Custom Software</a>
+    </nav>
+    <a class="menu__cta" href="mailto:gershon@clicktokmarketing.com">gershon@clicktokmarketing.com</a>
+  </div>
+
+  <main id="top">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Service — Custom Software</p>
+        <h1 class="page-hero__title">Software shaped to<br/><em>your business</em>.</h1>
+        <p class="page-hero__sub">Off-the-shelf tools force you into their workflow and charge you per seat for the privilege. We build tools that fit how you actually work.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary magnetic" href="#contact" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">Get my free build estimate</span>
+          </a>
+          <a class="btn btn--ghost magnetic" href="../index.html#fix" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">See all services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">01 — What you get</p>
+          <h2 class="section__title" data-reveal>Built for you,<br/>owned by <em>you</em>.</h2>
+        </div>
+        <div class="feat__grid">
+          <div class="feat" data-tilt>
+            <span class="feat__num">01</span>
+            <h3>Internal dashboards</h3>
+            <p>All your numbers — jobs, leads, revenue — in one screen instead of five logins.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">02</span>
+            <h3>Client portals</h3>
+            <p>Let customers book, pay, upload, and check status themselves, branded as you.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">03</span>
+            <h3>API & CRM integrations</h3>
+            <p>Your tools finally talking to each other. No more double entry between systems.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">04</span>
+            <h3>Rapid MVPs</h3>
+            <p>Got a product idea? We ship a working version fast, so you can validate before investing big.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">05</span>
+            <h3>No per-seat ransom</h3>
+            <p>One build, yours forever. No license fees that scale with your team.</p>
+          </div>
+          <div class="feat" data-tilt>
+            <span class="feat__num">06</span>
+            <h3>You own the code</h3>
+            <p>Full ownership and handover. You're never locked in — not even to us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" style="border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">02 — How it goes</p>
+          <h2 class="section__title" data-reveal>Simple on purpose.</h2>
+        </div>
+        <div class="steps__grid">
+          <article class="step" data-cursor="hover">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Map the workflow</h3>
+            <p class="step__desc">We learn how the work actually flows — not how the org chart says it does.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Prototype fast</h3>
+            <p class="step__desc">A working prototype in your hands early, so we course-correct before it's expensive.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Ship & iterate</h3>
+            <p class="step__desc">Launch lean, then improve based on how your team really uses it.</p>
+          </article>
+          <article class="step" data-cursor="hover">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Support</h3>
+            <p class="step__desc">We stick around for fixes and additions — or hand it all over. Your call.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <p class="section__eyebrow">03 — Say hello</p>
+        <h2 class="contact__title" data-reveal>Got a tool<br/>in <em>mind</em>?</h2>
+        <p class="contact__sub">Describe what you wish existed. We'll tell you what it takes to build — free.</p>
+        <a class="btn btn--primary btn--big magnetic" href="mailto:gershon@clicktokmarketing.com?subject=Custom%20software%20estimate" data-cursor="hover">
+          <span class="btn__bg"></span><span class="btn__label">gershon@clicktokmarketing.com</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav" aria-label="Services">
+      <a href="maps.html">Local Google Ranking</a>
+      <a href="websites.html">Website Design &amp; Build</a>
+      <a href="ads.html">Paid Ads</a>
+      <a href="automation.html">Process Automation</a>
+      <a href="software.html">Custom Software</a>
+    </nav>
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> ClickTok Marketing. All rights reserved.</p>
+      <p class="footer__tag">Find the bottleneck. Fix it. Grow.</p>
+    </div>
+  </footer>
+
+  <script src="../vendor/gsap.min.js"></script>
+  <script src="../vendor/ScrollTrigger.min.js"></script>
+  <script src="../vendor/lenis.min.js"></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

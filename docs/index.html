@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClickTok Marketing — Google Maps Ranking, Custom Software & Automation</title>
-  <meta name="description" content="ClickTok Marketing puts your business on the map. Google Maps ranking that drives calls, plus custom software and automation that run your back office while you sleep." />
+  <title>ClickTok Marketing — We Find What's Holding Your Business Back, and Fix It</title>
+  <meta name="description" content="One bottleneck is costing you customers: visibility, conversion, or busywork. ClickTok finds it and fixes it — local Google ranking, websites, paid ads, automation, custom software. Start with a free growth audit." />
   <meta property="og:title" content="ClickTok Marketing — We put your business on the map" />
-  <meta property="og:description" content="Google Maps ranking, custom software & automation." />
+  <meta property="og:description" content="Find the bottleneck. Fix it. Grow. Start with a free growth audit." />
   <meta name="theme-color" content="#0a0a08" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23f7df4d'/%3E%3Cpath d='M32 26l42 20-18 6-6 18z' fill='%230a0a08'/%3E%3C/svg%3E" />
   <link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -47,13 +47,22 @@
       <span class="nav__logo-text">click<em>tok</em></span>
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="#services" data-cursor="hover" class="nav__link"><span>Services</span></a>
-      <a href="#process" data-cursor="hover" class="nav__link"><span>Process</span></a>
+      <div class="nav__drop">
+        <a href="#fix" data-cursor="hover" class="nav__link"><span>Services<i>▼</i></span></a>
+        <div class="nav__drop-panel">
+          <a href="services/maps.html">Local Google Ranking</a>
+          <a href="services/websites.html">Website Design &amp; Build</a>
+          <a href="services/ads.html">Paid Ads</a>
+          <a href="services/automation.html">Process Automation</a>
+          <a href="services/software.html">Custom Software</a>
+        </div>
+      </div>
+      <a href="#process" data-cursor="hover" class="nav__link"><span>How it works</span></a>
       <a href="#why" data-cursor="hover" class="nav__link"><span>Why us</span></a>
       <a href="#contact" data-cursor="hover" class="nav__link"><span>Contact</span></a>
     </nav>
-    <a class="btn btn--small magnetic" href="mailto:gershon@clicktokmarketing.com" data-cursor="hover">
-      <span class="btn__bg"></span><span class="btn__label">Book a call</span>
+    <a class="btn btn--small magnetic" href="#contact" data-cursor="hover">
+      <span class="btn__bg"></span><span class="btn__label">Free growth audit</span>
     </a>
     <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span>
@@ -63,10 +72,17 @@
   <!-- Mobile menu -->
   <div class="menu" id="menu" aria-hidden="true">
     <nav class="menu__links" aria-label="Mobile">
-      <a href="#services" class="menu__link">Services</a>
-      <a href="#process" class="menu__link">Process</a>
+      <a href="#fix" class="menu__link">Services</a>
+      <a href="#process" class="menu__link">How it works</a>
       <a href="#why" class="menu__link">Why us</a>
       <a href="#contact" class="menu__link">Contact</a>
+    </nav>
+    <nav class="menu__services" aria-label="Services">
+      <a href="services/maps.html">Local Google Ranking</a>
+      <a href="services/websites.html">Website Design &amp; Build</a>
+      <a href="services/ads.html">Paid Ads</a>
+      <a href="services/automation.html">Process Automation</a>
+      <a href="services/software.html">Custom Software</a>
     </nav>
     <a class="menu__cta" href="mailto:gershon@clicktokmarketing.com">gershon@clicktokmarketing.com</a>
   </div>
@@ -84,14 +100,15 @@
           <span class="hero__line">business <em>on</em></span>
           <span class="hero__line"><em>the map.</em></span>
         </h1>
-        <p class="hero__sub">Google Maps ranking that makes the phone ring — backed by custom
-          software and automation that run the busywork while you sleep.</p>
+        <p class="hero__sub">Something specific is holding your business back — being invisible
+          on Google, a website that doesn't sell, or work that eats your week.
+          We find it. We fix it. One thing at a time, done properly.</p>
         <div class="hero__cta">
           <a class="btn btn--primary magnetic" href="#contact" data-cursor="hover">
-            <span class="btn__bg"></span><span class="btn__label">Get found on Google</span>
+            <span class="btn__bg"></span><span class="btn__label">Get my free growth audit</span>
           </a>
-          <a class="btn btn--ghost magnetic" href="#services" data-cursor="hover">
-            <span class="btn__bg"></span><span class="btn__label">Explore services</span>
+          <a class="btn btn--ghost magnetic" href="#fix" data-cursor="hover">
+            <span class="btn__bg"></span><span class="btn__label">Find my bottleneck</span>
           </a>
         </div>
         <p class="hero__hint" aria-hidden="true">Psst — click the terrain.</p>
@@ -106,124 +123,60 @@
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track" id="marqueeTrack">
         <div class="marquee__group">
-          <span>Google Maps Ranking</span><i>✦</i>
-          <span>Custom Software</span><i>✦</i>
+          <span>Local Google Ranking</span><i>✦</i>
+          <span>Website Design</span><i>✦</i>
+          <span>Paid Ads</span><i>✦</i>
           <span>Automation</span><i>✦</i>
-          <span>Local SEO</span><i>✦</i>
-          <span>Lead Generation</span><i>✦</i>
+          <span>Custom Software</span><i>✦</i>
         </div>
         <div class="marquee__group">
-          <span>Google Maps Ranking</span><i>✦</i>
-          <span>Custom Software</span><i>✦</i>
+          <span>Local Google Ranking</span><i>✦</i>
+          <span>Website Design</span><i>✦</i>
+          <span>Paid Ads</span><i>✦</i>
           <span>Automation</span><i>✦</i>
-          <span>Local SEO</span><i>✦</i>
-          <span>Lead Generation</span><i>✦</i>
+          <span>Custom Software</span><i>✦</i>
         </div>
       </div>
     </div>
 
-    <!-- ============ SERVICES ============ -->
-    <section class="services section" id="services">
+    <!-- ============ DIAGNOSTIC FUNNEL ============ -->
+    <section class="diag section" id="fix">
       <div class="container">
         <div class="section__head">
-          <p class="section__eyebrow">01 — What we do</p>
-          <h2 class="section__title" data-reveal>Three ways we make<br/>you <em>unmissable</em>.</h2>
+          <p class="section__eyebrow">01 — Start here</p>
+          <h2 class="section__title" data-reveal>What's holding<br/>you <em>back</em>?</h2>
+          <p class="section__sub">Pick the one that sounds like you. Every problem below has
+            a dedicated fix — not a bundle, not a retainer pile-on.</p>
         </div>
-
-        <div class="services__grid">
-
-          <article class="card" data-tilt data-cursor="card" tabindex="0">
-            <div class="card__glare" aria-hidden="true"></div>
-            <div class="card__inner">
-              <div class="card__top">
-                <span class="card__num">01</span>
-                <div class="card__icon card__icon--maps" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none">
-                    <path class="icon-pin" d="M24 42s-13-10.4-13-20a13 13 0 1 1 26 0c0 9.6-13 20-13 20Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                    <circle class="icon-pin-dot" cx="24" cy="21" r="4.5" fill="currentColor"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="card__title">Google Maps<br/>Ranking</h3>
-              <p class="card__desc">Own the Map Pack. We optimize your Google Business Profile, build
-                local authority, and push you into the top 3 — where the calls actually happen.</p>
-              <div class="card__rank" aria-hidden="true">
-                <div class="card__rank-bar" style="--h:38%"><b>#7</b></div>
-                <div class="card__rank-bar" style="--h:58%"><b>#4</b></div>
-                <div class="card__rank-bar card__rank-bar--win" style="--h:92%"><b>#1</b></div>
-              </div>
-              <ul class="card__list">
-                <li>Google Business Profile optimization</li>
-                <li>Reviews &amp; reputation engine</li>
-                <li>Local citations &amp; authority building</li>
-                <li>Geo-grid rank tracking &amp; reporting</li>
-              </ul>
-              <span class="card__more" aria-hidden="true">Tap to expand <i>+</i></span>
-            </div>
-          </article>
-
-          <article class="card" data-tilt data-cursor="card" tabindex="0">
-            <div class="card__glare" aria-hidden="true"></div>
-            <div class="card__inner">
-              <div class="card__top">
-                <span class="card__num">02</span>
-                <div class="card__icon card__icon--code" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none">
-                    <path class="icon-chev-l" d="M18 16 10 24l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path class="icon-chev-r" d="m30 16 8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path class="icon-slash" d="M27 12 21 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="card__title">Custom<br/>Software</h3>
-              <p class="card__desc">Tools built around your business — not the other way around.
-                Dashboards, portals, and integrations shipped fast, without enterprise bloat.</p>
-              <div class="card__code" aria-hidden="true">
-                <span class="card__code-dot"></span><span class="card__code-dot"></span><span class="card__code-dot"></span>
-                <code><span class="t-key">const</span> growth = <span class="t-fn">build</span>(<span class="t-str">'your idea'</span>);</code>
-              </div>
-              <ul class="card__list">
-                <li>Web apps &amp; internal dashboards</li>
-                <li>Client portals &amp; booking systems</li>
-                <li>API &amp; CRM integrations</li>
-                <li>Rapid MVPs that validate fast</li>
-              </ul>
-              <span class="card__more" aria-hidden="true">Tap to expand <i>+</i></span>
-            </div>
-          </article>
-
-          <article class="card" data-tilt data-cursor="card" tabindex="0">
-            <div class="card__glare" aria-hidden="true"></div>
-            <div class="card__inner">
-              <div class="card__top">
-                <span class="card__num">03</span>
-                <div class="card__icon card__icon--auto" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none">
-                    <circle class="icon-node icon-node--1" cx="10" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
-                    <circle class="icon-node icon-node--2" cx="24" cy="12" r="4" stroke="currentColor" stroke-width="2.5"/>
-                    <circle class="icon-node icon-node--3" cx="24" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
-                    <circle class="icon-node icon-node--4" cx="38" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
-                    <path class="icon-wire" d="M13.5 21.5 20.5 14.5M13.5 26.5l7 7M27.5 14.5l7 7M27.5 33.5l7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="card__title">Automation<br/>&amp; AI</h3>
-              <p class="card__desc">Kill the busywork. We wire your lead flow, follow-ups, reviews,
-                and reporting into automations that never call in sick.</p>
-              <div class="card__flow" aria-hidden="true">
-                <span>Lead</span><b>→</b><span>Follow-up</span><b>→</b><span class="card__flow-win">Booked</span>
-              </div>
-              <ul class="card__list">
-                <li>Instant lead capture &amp; routing</li>
-                <li>AI follow-up, chat &amp; review requests</li>
-                <li>Zapier / Make / custom pipelines</li>
-                <li>Auto-reporting you'll actually read</li>
-              </ul>
-              <span class="card__more" aria-hidden="true">Tap to expand <i>+</i></span>
-            </div>
-          </article>
-
+        <div class="diag__list">
+          <a class="diag__row" href="services/maps.html" data-cursor="hover">
+            <span class="diag__num">01</span>
+            <span class="diag__pain">"Nobody finds us on Google."</span>
+            <span class="diag__fix">Local Google Ranking <i>→</i></span>
+          </a>
+          <a class="diag__row" href="services/websites.html" data-cursor="hover">
+            <span class="diag__num">02</span>
+            <span class="diag__pain">"Our website looks fine but doesn't sell."</span>
+            <span class="diag__fix">Website Design &amp; Build <i>→</i></span>
+          </a>
+          <a class="diag__row" href="services/ads.html" data-cursor="hover">
+            <span class="diag__num">03</span>
+            <span class="diag__pain">"We need more leads — like, yesterday."</span>
+            <span class="diag__fix">Paid Ads <i>→</i></span>
+          </a>
+          <a class="diag__row" href="services/automation.html" data-cursor="hover">
+            <span class="diag__num">04</span>
+            <span class="diag__pain">"We're drowning in manual busywork."</span>
+            <span class="diag__fix">Process Automation <i>→</i></span>
+          </a>
+          <a class="diag__row" href="services/software.html" data-cursor="hover">
+            <span class="diag__num">05</span>
+            <span class="diag__pain">"Off-the-shelf tools don't fit how we work."</span>
+            <span class="diag__fix">Custom Software <i>→</i></span>
+          </a>
         </div>
+        <p class="diag__foot">Not sure which one it is? That's literally what the
+          <a href="#contact">free audit</a> is for.</p>
       </div>
     </section>
 
@@ -232,7 +185,7 @@
       <div class="container">
         <div class="section__head">
           <p class="section__eyebrow">02 — How it works</p>
-          <h2 class="section__title" data-reveal>From invisible<br/>to <em>inevitable</em>.</h2>
+          <h2 class="section__title" data-reveal>One bottleneck<br/>at a <em>time</em>.</h2>
         </div>
       </div>
       <div class="process__wrap" id="processWrap">
@@ -240,26 +193,26 @@
           <article class="step" data-cursor="hover">
             <span class="step__num">01</span>
             <h3 class="step__title">Audit</h3>
-            <p class="step__desc">We map your market: where you rank, who outranks you, and exactly
-              why. No fluff — a geo-grid snapshot of reality.</p>
+            <p class="step__desc">Free, no strings. We look at how customers find you, what they
+              see, and where they drop off — then tell you the one thing costing you most.</p>
           </article>
           <article class="step" data-cursor="hover">
             <span class="step__num">02</span>
-            <h3 class="step__title">Optimize</h3>
-            <p class="step__desc">Profile, categories, reviews, citations, site signals — every lever
-              tuned so Google has no excuse not to show you.</p>
+            <h3 class="step__title">Plan</h3>
+            <p class="step__desc">One clear fix, scoped and priced upfront. No bundles you don't
+              need, no surprise retainers. You know exactly what you're buying.</p>
           </article>
           <article class="step" data-cursor="hover">
             <span class="step__num">03</span>
-            <h3 class="step__title">Rank</h3>
-            <p class="step__desc">You climb into the Map Pack and the calls start. We track every
-              keyword on a live grid so you watch it happen.</p>
+            <h3 class="step__title">Fix</h3>
+            <p class="step__desc">We do the work — ranking, building, automating, or launching —
+              and you watch it happen with live tracking and honest reporting.</p>
           </article>
           <article class="step" data-cursor="hover">
             <span class="step__num">04</span>
-            <h3 class="step__title">Automate</h3>
-            <p class="step__desc">Custom software and automations catch every lead, follow up
-              instantly, and report back — growth on autopilot.</p>
+            <h3 class="step__title">Scale</h3>
+            <p class="step__desc">When the first fix is paying for itself, we add the next lever.
+              That's how you grow without betting the farm on day one.</p>
           </article>
         </div>
       </div>
@@ -272,15 +225,15 @@
           <p class="section__eyebrow">03 — Why ClickTok</p>
         </div>
         <p class="why__statement" id="whyStatement">
-          Most agencies sell you reports. We build you a machine — one that ranks, captures,
-          follows up, and books — so every search becomes a customer and every customer
-          becomes a review that ranks you higher. That's the loop. We engineer it.
+          We're not an everything agency. We diagnose first, then fix the one thing
+          holding you back — properly, with its own specialist playbook. When it
+          pays for itself, we add the next lever. Focused work. Compounding results.
         </p>
         <div class="why__chips" id="whyChips">
-          <span class="chip" data-cursor="hover">Top-3 Map Pack focus</span>
-          <span class="chip" data-cursor="hover">Software, not spreadsheets</span>
-          <span class="chip" data-cursor="hover">Automation-first</span>
-          <span class="chip" data-cursor="hover">One partner, full stack</span>
+          <span class="chip" data-cursor="hover">One fix at a time</span>
+          <span class="chip" data-cursor="hover">Scoped &amp; priced upfront</span>
+          <span class="chip" data-cursor="hover">You own everything we build</span>
+          <span class="chip" data-cursor="hover">Live tracking, honest reports</span>
           <span class="chip" data-cursor="hover">No long-term lock-in</span>
         </div>
       </div>
@@ -290,10 +243,10 @@
     <section class="contact section" id="contact">
       <div class="container contact__inner">
         <p class="section__eyebrow">04 — Say hello</p>
-        <h2 class="contact__title" data-reveal>Let's make you<br/><em>unmissable</em>.</h2>
-        <p class="contact__sub">Tell us about your business. We'll tell you exactly how we'd rank it —
-          free, no strings.</p>
-        <a class="btn btn--primary btn--big magnetic" id="contactBtn" href="mailto:gershon@clicktokmarketing.com?subject=Put%20me%20on%20the%20map" data-cursor="hover">
+        <h2 class="contact__title" data-reveal>Find out what's<br/>costing <em>you</em>.</h2>
+        <p class="contact__sub">Tell us about your business. We'll audit how customers find you
+          and show you the bottleneck — free, no strings.</p>
+        <a class="btn btn--primary btn--big magnetic" id="contactBtn" href="mailto:gershon@clicktokmarketing.com?subject=Free%20growth%20audit" data-cursor="hover">
           <span class="btn__bg"></span><span class="btn__label">gershon@clicktokmarketing.com</span>
         </a>
       </div>
@@ -302,9 +255,16 @@
   </main>
 
   <footer class="footer">
+    <nav class="footer__nav" aria-label="Services">
+      <a href="services/maps.html">Local Google Ranking</a>
+      <a href="services/websites.html">Website Design &amp; Build</a>
+      <a href="services/ads.html">Paid Ads</a>
+      <a href="services/automation.html">Process Automation</a>
+      <a href="services/software.html">Custom Software</a>
+    </nav>
     <div class="container footer__inner">
       <p>© <span id="year">2026</span> ClickTok Marketing. All rights reserved.</p>
-      <p class="footer__tag">Google Maps Ranking · Custom Software · Automation</p>
+      <p class="footer__tag">Find the bottleneck. Fix it. Grow.</p>
     </div>
   </footer>
 
